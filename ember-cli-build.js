@@ -27,6 +27,19 @@ module.exports = function(defaults) {
   staticAddonTestSupportTrees: true,
   staticAddonTrees: true,
   staticHelpers: true,
-  staticComponents: true
+  staticComponents: true,
+  packageRules: [
+    {
+      package: "ember-element-helper",
+      addonModules: {
+        "helpers/-element.js": {
+          dependsOnComponents: [
+            "{{-dynamic-element}}",
+            "{{-dynamic-element-alt}}"
+          ],
+        },
+      },
+    }
+  ]
  });
 };

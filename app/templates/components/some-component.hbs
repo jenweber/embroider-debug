@@ -1,14 +1,15 @@
 <div>{{this.counter}}</div>
 <button {{on "click" this.increment}}>increment</button>
 <br>
-<button {{action toggleThing}}>Toggle</button>
+{{!-- <button {{action toggleThing}}>Toggle</button> --}}
 <AnimatedContainer>
-  {{#animated-if this.showThing use=this.transition }}
-    <div class="message" {{action "toggleThing"}}>
-      Hello!
+  {{#animated-if this.showIt use=this.transition }}
+    <div class="message">
+      hello {{this.counter}}
     </div>
   {{/animated-if}}
 </AnimatedContainer>
+
 <p>
   This is outside of the container.
 </p>

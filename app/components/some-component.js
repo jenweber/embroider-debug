@@ -6,11 +6,14 @@ import {easeOut, easeIn } from 'ember-animated/easings/cosine';
 
 
 export default class SomeComponentComponent extends Component {
-  @tracked counter = 0
+  @tracked counter = false
+
+  @tracked showIt = false;
 
   @action
   increment() {
     this.counter += 1;
+    this.showIt = !this.showIt
   }
 
   @tracked showThing = false

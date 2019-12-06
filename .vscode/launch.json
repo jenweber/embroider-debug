@@ -10,7 +10,7 @@
       "name": "Test Suite",
       "cwd": "${workspaceRoot}",
       "program": "${workspaceRoot}/node_modules/ember-cli/bin/ember",
-      "args": ["test"]
+      "args": ["t"]
     },
   ]
 }
